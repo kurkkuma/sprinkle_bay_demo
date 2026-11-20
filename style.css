@@ -125,6 +125,32 @@ body::before {
   text-shadow: 0 3px 0 #e4dcfb;
 }
 
+.updated {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 12px;
+  padding: 5px 14px 5px 11px;
+  border-radius: 999px;
+  background: #e3f6e8;
+  color: #2c7547;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.updated__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3cbf6b;
+  animation: ping 2s ease-out infinite;
+}
+
+@keyframes ping {
+  0%        { box-shadow: 0 0 0 0 rgba(60, 191, 107, 0.6); }
+  70%, 100% { box-shadow: 0 0 0 7px rgba(60, 191, 107, 0); }
+}
+
 .tagline {
   margin: 0 0 30px;
   font-size: clamp(1.05rem, 1rem + 0.35vw, 1.2rem);
@@ -292,6 +318,98 @@ body::before {
   color: var(--pink-edge);
   font-size: 1rem;
   font-weight: 900;
+}
+
+.news {
+  margin-top: 26px;
+  padding: 18px 18px 16px;
+  border-radius: 22px;
+  background: #fff1dc;
+  text-align: left;
+}
+
+.news__title {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.news__list {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.news__list li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.news__list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #ff8fb1;
+}
+
+.news__list li:nth-child(3n+2)::before { color: #7cc8ff; }
+.news__list li:nth-child(3n)::before   { color: #8fdc9a; }
+
+.news__list strong {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.update {
+  margin-top: 26px;
+  padding: 18px 18px 16px;
+  border-radius: 22px;
+  background: #f2efff;
+  text-align: left;
+}
+
+.update__title {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.update__text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.update strong {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.update__tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.update__tip-icon {
+  flex: none;
+  font-size: 1.1rem;
+  line-height: 1.25;
 }
 
 .footer {
